@@ -1,0 +1,41 @@
+{
+    "name": "@mrlm/leaflet-icon",
+    "description": "Simple Leaflet.js icon extension to handle multiple additional features like rotation and other useful stuff.",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "files": [
+        "dist",
+        "docs"
+    ],
+    "author": {
+        "name": "Martin Hrášek - MRLM.NET",
+        "email": "martin@hrasek.email"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mrlm-net/leaflet-icon.git"
+    },
+    "scripts": {
+        "build": "npx vite build",
+        "package:publish": "npm publish --access public",
+        "test": "vitest run",
+        "serve": "npx vite"
+    },
+    "devDependencies": {
+        "@types/leaflet": "^1.9.21",
+        "@types/node": "^25.0.10",
+        "leaflet": "^1.9.4",
+        "typescript": "^5.9.3",
+        "vite": "^7.3.1",
+        "vite-plugin-dts": "^4.5.4",
+        "vitest": "^4.0.18"
+    }
+}

@@ -32,7 +32,17 @@ L.Marker.include({
     _applyRotation: function () {
         if(this.options.rotationAngle) {
             this._icon.style[L.DomUtil.TRANSFORM+'Origin'] = this.options.rotationOrigin;
-            this._icon.style[L.DomUtil.TRANSFORM] += ' rotateZ(' + this.options.rotationAngle + 'deg)';
+            
+            // Get the current transform and replace/add the rotation
+            const currentTransform = this._icon.style[L.DomUtil.TRANSFORM] || '';
+            const rotatePattern = /rotateZ\([^)]+\)/;
+            const newRotate = 'rotateZ(' + this.options.rotationAngle + 'deg)';
+            
+            if (rotatePattern.test(currentTransform)) {
+                this._icon.style[L.DomUtil.TRANSFORM] = currentTransform.replace(rotatePattern, newRotate);
+            } else {
+                this._icon.style[L.DomUtil.TRANSFORM] = currentTransform + ' ' + newRotate;
+            }
         }
     },
 

@@ -28,6 +28,7 @@ export default defineConfig({
         // for externalized deps
         globals: {
           "node": "node",
+          "leaflet": "L",
         },
       },
     },

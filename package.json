@@ -1,14 +1,14 @@
 {
     "name": "@mrlm/leaflet-icon",
     "description": "Simple Leaflet.js icon extension to handle multiple additional features like rotation and other useful stuff.",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "type": "module",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
         }
     },
     "files": [

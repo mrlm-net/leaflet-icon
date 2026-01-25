@@ -49,11 +49,13 @@ L.Marker.include({
     }
 });
 
+type MarkerOptionsWithRotation = L.MarkerOptions & {
+    rotationAngle?: number;
+    rotationOrigin?: string;
+};
+
 interface RotatableMarker extends L.Marker {
-    options: L.MarkerOptions & {
-        rotationOrigin?: string;
-        rotationAngle?: number;
-    };
+    options: MarkerOptionsWithRotation;
     _initIcon: () => void;
     _setPos: (pos: L.Point) => void;
     _applyRotation: () => void;
@@ -61,6 +63,7 @@ interface RotatableMarker extends L.Marker {
     setRotationOrigin: (origin: string) => this;
 }
 
-export { 
-    RotatableMarker 
+export {
+    MarkerOptionsWithRotation,
+    RotatableMarker
 };   

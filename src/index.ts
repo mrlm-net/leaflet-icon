@@ -1,4 +1,6 @@
-interface RotatableMarker extends L.Marker {
+declare const L: typeof import('leaflet');
+
+export interface RotatableMarker extends L.Marker {
     options: L.MarkerOptions & {
         rotationOrigin?: string;
         rotationAngle?: number;

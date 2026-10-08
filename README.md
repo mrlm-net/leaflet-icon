@@ -7,7 +7,7 @@ Simple Leaflet.js icon extension to handle multiple additional features like rot
 | NPM name | `@mrlm/leaflet-icon` |
 | NPM version | ![NPM Version](https://img.shields.io/npm/v/@mrlm/leaflet-icon) |
 | Latest version | ![GitHub Release](https://img.shields.io/github/v/release/mrlm-net/leaflet-icon) |
-| License | ![GitHub License](https://img.shields.io/github/license/mrlm-net/leaflet-icon) |
+| License | [![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-6c7480)](LICENSE) |
 
 ## Table of contents
 
